@@ -8,7 +8,7 @@ const sr = ScrollReveal ({
     distance: '65px',
     duration: 2600,
     delay: 450,
-    reset:true
+    reset:false
 });
 sr.reveal('.monitoinicio-texto', {delay:200, origin:'left'})
 sr.reveal('.monitoinicio-img', {delay:450, origin:'top'})

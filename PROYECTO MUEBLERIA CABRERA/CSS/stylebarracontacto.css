@@ -69,8 +69,10 @@ body {
     }
 }
 @media (max-width: 1340px) {
+    
 }
 @media (max-width: 1195px) {
+
 }
 @media (max-width: 990px) {
     #menu-icon {
@@ -101,25 +103,24 @@ body {
     }
 }
 @media (max-width: 680px) {
+
 }
 @media (max-width: 550px) {
+
 }
 
 
-
-.servicios h1{
-    font-family: 'Dancing Script', cursive;
-    font-weight: bold;
+.botonrrss a{
+    display: block;
     text-align: center;
-    font-size: 55px;
+    color: #000000;
+    size: 50px;
+}
+.botonrrss p{
+    font-family: 'Dancing Script';
+    font-size: 40px;
 }
 
-.servicios p1{
-    font-family: 'Open Sans';
-    font-size: 20px;
-    display: list-item;
-    text-align: left;
-    padding: 20px;
+iframe{
+    height: 80%;
 }
-
-

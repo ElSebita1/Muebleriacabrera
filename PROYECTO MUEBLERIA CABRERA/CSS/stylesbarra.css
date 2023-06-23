@@ -104,7 +104,6 @@ section {
     position: fixed;
     bottom: 6%;
     right: 9%;
-    z-index: 99;
 }
 .volver-arriba i {
     display: block;
@@ -287,8 +286,8 @@ body {
     }
     .navegador {
         position: absolute;
-        top: 60px;
-        right: -100%;
+        top: -40%;
+        right: 0;
         width: 300px;
         background: #000000;
         display: flex;
@@ -306,6 +305,7 @@ body {
     }
     .navegador.open {
         right: 0;
+        top: 60px;
     }
 }
 @media (max-width: 680px) {
@@ -330,7 +330,7 @@ body {
     }
     .monitoinicio-texto{
         text-align: center;
-        padding: 50px 75px 50px;
+        padding: 50px 67px 50px;
     }
     .monitoinicio-texto h1 {
         font-size: 55px;
