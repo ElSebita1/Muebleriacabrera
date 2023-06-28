@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muebleria Cabrera</title>
+    <link rel="shortcut icon" href="/IMG/main/MuebleriaCabrera.png" />
+    <link rel="stylesheet" href="/CSS/stylesbarracatalogo.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Artifika&family=Dancing+Script&display=swap" rel="stylesheet">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+</head>
+<body>
+    <header>
+            <a href="/index.html" class="logo">Mueblería Cabrera</a>
+            <!--<img class="imglogo" src="/IMG/MuebleriaCabrera.png">-->
+        <ul class="navegador">
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catalogo</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <div id="catalogo" class="catalogo-container"></div>
+
+    <!-- AQUI EL SCROLL REVEAL QUE ES PARA QUE APAREZCA DESPUES EL TEXTO EN EL INICIO DE LA PAGINA-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <footer style="background: #beb3a0;">
+      <div class="contactos">
+        <h4>¡Contactanos!</h4>
+        <div class="sociales">
+          <a href="https://www.facebook.com/muebleriafamiliacabrera"><i class="ri-facebook-box-fill" style="color:#555047;"></i></a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="ri-whatsapp-fill" style="color:#555047;"></i></a>
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><i class="ri-mail-fill" style="color:#555047;"></i></a>
+        </div>
+      </div>
+    <div class="bajada">
+        <h2>¡Renovamos constantemente nuestro Catálogo!</h2>
+        <p>Todo nuevo realizado en nuestro taller</p><br>
+        <p>de entrega inmediata y a pedido</p>
+    </div>
+  </footer>
+    <!-- AQUI VAN LOS SCRIPTS REALIZADOS CON JAVASCRIPT-->
+    <script src="/JS/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- AQUI IRAN LOS SCRIPTS RELACIONADOS A FIREBASE Y AL ENLACE CON LA BASE DE DATOS NO RELACIONAL-->
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAjUuveUzOGYfn1T2hipaF-IU6OoF1uk90",
+            authDomain: "muebleriacabrera-f24f4.firebaseapp.com",
+            projectId: "muebleriacabrera-f24f4",
+            storageBucket: "muebleriacabrera-f24f4.appspot.com",
+            messagingSenderId: "854798919075",
+            appId: "1:854798919075:web:dd5689688ab4395da36616",
+            measurementId: "G-HF46CWKHF6"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const catalogoCollection = db.collection('muebles');
+        const storage = firebase.storage();
+        // para obtener imagenes de storage
+        var storageRef = storage.ref();
+        var imageRef = storageRef.child('cocina1.jpg');
+        var catalogoRef = storage.ref('');
+
+        // Recupera todas las imágenes del catálogo
+        catalogoRef.listAll().then(function(result) {
+            result.items.forEach(function(itemRef) {
+  var imageName = itemRef.name;
+  var nombreSinExtension = imageName.replace('.jpg', '');
+
+  // Busca los datos de la imagen en Firestore por el campo "nombre"
+  catalogoCollection.where("nombre", "==", nombreSinExtension).get().then(function(querySnapshot) {
+    querySnapshot.forEach(function(doc) {
+      var data = doc.data();
+      var nombre = data.nombre;
+      var descripcion = data.descripcion;
+      var categoria = data.categoria;
+
+      // Crea elementos HTML para mostrar el nombre, la descripción y la categoría
+      var catalogoItem = document.createElement('div');
+catalogoItem.classList.add('catalogo-item');
+
+// Crea un elemento de imagen
+var imageElement = document.createElement('img');
+imageElement.src = "https://firebasestorage.googleapis.com/v0/b/muebleriacabrera-f24f4.appspot.com/o/" + encodeURIComponent(imageName) + "?alt=media";
+
+// Crea elementos para el nombre, descripción y categoría
+var nombreElement = document.createElement('h3');
+nombreElement.textContent = nombre;
+
+var descripcionElement = document.createElement('p');
+descripcionElement.textContent = descripcion;
+
+var categoriaElement = document.createElement('p');
+categoriaElement.textContent = 'Categoría: ' + categoria;
+
+// Agrega los elementos al elemento del catálogo
+catalogoItem.appendChild(imageElement);
+catalogoItem.appendChild(nombreElement);
+catalogoItem.appendChild(descripcionElement);
+catalogoItem.appendChild(categoriaElement);
+
+// Agrega el elemento del catálogo al contenedor del catálogo
+var catalogoContainer = document.getElementById('catalogo');
+catalogoContainer.appendChild(catalogoItem);
+    });
+  }).catch(function(error) {
+    console.log(error);
+  });
+});
+
+
+        }).catch(function(error) {
+            console.log(error);
+        });
+    </script>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+</body>
+</html>
