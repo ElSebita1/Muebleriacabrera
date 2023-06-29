@@ -57,6 +57,7 @@ body {
     font-size: 50px;
 }
 .bajada {
+    margin-top: 200px;
     padding: 30px 100px;
 }
 .bajada h2 {
@@ -123,18 +124,39 @@ body {
 
 }
 
+.variedad h1{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 55px;
+}
 
 .botonrrss a{
-    display: block;
-    text-align: center;
+    text-align: left;
+    padding: 20px;
+    margin-left: 100px;
     color: #000000;
-    size: 50px;
 }
+
 .botonrrss p{
-    font-family: 'Dancing Script';
-    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    display: list-item;
+    text-align: left;
 }
 
 iframe{
-    height: 80%;
+    float: right;
+    width: 50%;
+    border: 3px solid rgb(126, 107, 73); 
+    padding: 10px;
+    margin-right: 100px;
+}
+
+.maps h2{
+    font-family: 'Dancing Script', cursive;
+    text-align: right;
+    font-size: 45px;
+    padding: 10px;
+    margin-right: 300px;
 }
