@@ -57,6 +57,7 @@ body {
     font-size: 50px;
 }
 .bajada {
+    margin-top: 200px;
     padding: 30px 100px;
 }
 .bajada h2 {
@@ -70,10 +71,67 @@ body {
     font-style: italic;
     text-align: center;
 }
+
+.variedad h1{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 55px;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    align-items: center;
+}
+  
+  .botonrrss a{
+    text-align: left;
+    padding: 20px;
+    color: #000000;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 60px;
+  }
+  
+  .botonrrss p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+    display: block;
+    text-align: left;
+    margin-top: 70px;
+  }
+  
+  .maps {
+    text-align: right;
+  }
+  
+  iframe {
+    width: 600px;
+    border: 1px solid rgb(126, 107, 73);
+    border-radius: 4px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    height: 500px;
+  }
+  
+  .maps h2 {
+    font-family: 'Dancing Script', cursive;
+    text-align: right;
+    font-size: 30px;
+    padding: 40px;
+    margin-right: 1px;
+  }
+
+/* ---------- Reescalado ---------- */
+
 @media (max-width: 1535px) {
     header {
         padding: 15px 3%;
         transition: .2s;
+    }
+    .maps h2{
+        font-size: 25px;
     }
 }
 @media (max-width: 1460px) {
@@ -81,15 +139,35 @@ body {
         padding: 0 12%;
         transition: .2s;
     }
+    .botonrrss p{
+        font-size: 40px;
+    }
 }
 @media (max-width: 1340px) {
-    
+    .botonrrss p {
+        font-size: 38px;
+    }
+    iframe{
+        height: 400px;
+    }
+    .maps h2{
+        font-size: 20px;
+    }
 }
 @media (max-width: 1195px) {
-
+    .botonrrss p {
+        font-size: 33px;
+    }
+    iframe{
+        width: 500px;
+        height: 400px;
+    }
+    .maps h2 {
+        font-size: 22px;
+    }
 }
-@media (max-width: 990px) {
-    #menu-icon {
+@media (max-width: 990px) { /* ----- CELULARES ----- */
+    #menu-icon{
         display: block;
     }
     .navegador {
@@ -115,26 +193,82 @@ body {
         right: 0;
         top: 60px;
     }
+    .container{
+        grid-template-columns: repeat(1, minmax(300px, auto));
+    }
+    .maps {
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    iframe {
+        float: none;
+        margin: 0 auto;
+        width: 600px;
+    }
+    .maps h2{
+        text-align: center;
+        margin: 0 auto;
+        font-size: 24px;
+    }
+    .rrss p{
+        font-size: 40px;
+    }
+    .botonrrss {
+        text-align: left;
+    }
+    .botonrrss p{
+        text-align: center;
+        margin-right: 0;
+        margin-left: 0;
+        margin-top: 40px;
+    }
 }
 @media (max-width: 680px) {
-
+    iframe{
+        width: 540px;
+    }
+    .bajada h2 {
+        font-size: 40px;
+        text-align: center;
+    }
+    .maps h2{
+        font-size: 22px;
+    }
 }
 @media (max-width: 550px) {
-
+    iframe{
+        width: 400px;
+    }
+    .botonrrss p{
+        font-size: 32px;
+    }
+    .botonrrss a{
+        text-align: left;
+        padding: 20px;
+        margin-left: 1px;
+    }
+    .maps h2{
+        font-size: 17px;
+    }
+    .rrss p{
+        font-size: 37px;
+    }
 }
-
-
-.botonrrss a{
-    display: block;
-    text-align: center;
-    color: #000000;
-    size: 50px;
-}
-.botonrrss p{
-    font-family: 'Dancing Script';
-    font-size: 40px;
-}
-
-iframe{
-    height: 80%;
+@media (max-width: 420px) {
+    iframe{
+        width: 300px;
+    }
+    .botonrrss p{
+        font-size: 25px;
+        margin-top: 30px;
+    }
+    .botonrrss a{
+        text-align: left;
+        padding: 20px;
+        margin-left: 1px;
+    }
+    .rrss p{
+        font-size: 32px;
+    }
 }
