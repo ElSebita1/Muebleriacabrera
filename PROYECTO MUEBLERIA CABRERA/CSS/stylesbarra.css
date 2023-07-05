@@ -253,6 +253,7 @@ body {
     }
     .textoinicio p {
         font-size: 15px;
+        text-align: center;
     }
 }
 @media (max-width: 1195px) {
@@ -324,6 +325,15 @@ body {
     .muestrario {
         margin-left: 0;
         margin-right: 0;
+    }
+    .categoriain {
+        grid-template-columns: repeat(2,50%);
+    }
+    .caja-prin {
+        margin: 10px 5px;
+    }
+    .caja-btn a {
+        height: 25px;
     }
 }
 @media (max-width: 550px) {
