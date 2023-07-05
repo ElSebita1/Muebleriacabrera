@@ -70,10 +70,54 @@ body {
     font-style: italic;
     text-align: center;
 }
+
+.botonesrrss-texto p1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    display: list-item;
+    text-align: left;
+    padding: 20px;
+}
+
+.botonesrrss-texto a1{
+    
+    color: rgb(36, 36, 36);
+}
+
+
+.image-frame {
+    float: right;
+    width: 300px;
+    border: 3px solid rgb(126, 107, 73); 
+    padding: 10px;
+    margin-right: 100px;
+  }
+
+@media (max-width: 2560px) {
+    .botonesrrss-texto p1{
+        font-size: 50px;
+    }
+    .image-frame{
+        width: 600px;
+        height: auto;
+        float:right;
+        margin-right: 80px;
+        
+    }
+}
+
 @media (max-width: 1535px) {
     header {
         padding: 15px 3%;
         transition: .2s;
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
     }
 }
 @media (max-width: 1460px) {
@@ -81,10 +125,124 @@ body {
         padding: 0 12%;
         transition: .2s;
     }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
 }
 @media (max-width: 1340px) {
+    #menu-icon {
+        display: block;
+    }
+    .navegador {
+        position: absolute;
+        top: -50%;
+        right: 0;
+        width: 300px;
+        background: #000000;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+        z-index: 11;
+    }
+    .navegador a {
+        margin-left: 0;
+        display: block;
+        margin: 10px 0;
+        color: white;
+    }
+    .navegador.open {
+        right: 0;
+        top: 60px;
+    }
+    .categorias button {
+        padding: 2px;
+    }
+    .categorias {
+        grid-gap: 10px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
 }
+
 @media (max-width: 1195px) {
+    #menu-icon {
+        display: block;
+    }
+    .navegador {
+        position: absolute;
+        top: -50%;
+        right: 0;
+        width: 300px;
+        background: #000000;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+        z-index: 11;
+    }
+    .navegador a {
+        margin-left: 0;
+        display: block;
+        margin: 10px 0;
+        color: white;
+    }
+    .navegador.open {
+        right: 0;
+        top: 60px;
+    }
+    .categorias button {
+        padding: 2px;
+    }
+    .categorias {
+        grid-gap: 10px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+}
+@media (max-width: 1024px) {
+    .image-frame{
+        width: 100%;
+        height: auto;
+        float:none;
+        padding: 10px;
+        margin-left: auto;
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
 }
 @media (max-width: 990px) {
     #menu-icon {
@@ -113,13 +271,104 @@ body {
         right: 0;
         top: 60px;
     }
+    .categorias button {
+        padding: 2px;
+    }
+    .categorias {
+        grid-gap: 10px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
 }
 @media (max-width: 680px) {
-}
-@media (max-width: 550px) {
+    .categorias{
+        padding: 15px 3px;
+    }
+    .categorias button {
+        font-size: 15px;
+        padding: 4px 7px;
+    }
+    .catalogo-container {
+        display: grid;
+        grid-template-columns: repeat(2, 48.5%); 
+        grid-gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    .catalogo-item h3 {
+        font-size: 20px;
+      }
+    
+      .catalogo-item p {
+        font-size: 12px;
+      }
+      .bajada h2 {
+        font-size: 40px;
+      }
+      .bajada p {
+        font-size: 20px;
+      }
+      .bajada {
+        padding: 20px 20px 20px;
+      }
+      .image-frame{
+        width: 100%;
+        height: auto;
+        float:none;
+        padding: 10px;
+        margin-left: auto;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 20px;
+    }
 }
 
-
+@media (max-width: 768px) {
+    .image-frame{
+        width: 100%;
+        height: auto;
+        float:none;
+        padding: 10px;
+        margin-left: auto;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+}
+@media (max-width: 375px) {
+    .image-frame{
+        width: 100%;
+        height: auto;
+        float:none;
+        padding: 10px;
+        margin-left: auto;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 20px;
+    }
+}
+@media (max-width: 320px) {
+    .image-frame{
+        width: 100%;
+        height: auto;
+        float:none;
+        padding: 10px;
+        margin-left: auto;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 20px;
+    }
+}
 
 .servicios h1{
     font-family: 'Dancing Script', cursive;
@@ -128,12 +377,5 @@ body {
     font-size: 55px;
 }
 
-.servicios p1{
-    font-family: 'Open Sans';
-    font-size: 20px;
-    display: list-item;
-    text-align: left;
-    padding: 20px;
-}
 
 
