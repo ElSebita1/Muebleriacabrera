@@ -77,25 +77,24 @@ body {
     margin-top: 10px;
     margin-bottom: 30px;
   }
-
+  
   .catalogo-item {
     text-align: center;
     background: #d8d3c6;
   }
-
   .catalogo-item img {
     max-width: 100%;
-    max-height: 200px; /* Ajusta este valor según tus necesidades */
+    max-height: 270px;
     width: auto;
     height: auto;
     margin-top: 10px;
   }
-
+  
   .catalogo-item h3 {
     margin: 10px 0;
     font-size: 25px;
   }
-
+  
   .catalogo-item p {
     margin: 5px 0;
     font-size: 14px;
@@ -139,6 +138,32 @@ body {
   .categorias button:active {
     position:relative;
 	top:1px;
+  }
+  #imagen-expandida-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    z-index: 9999;
+    text-align: center;
+  }
+  
+  #cerrar-imagen {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  #imagen-expandida {
+    max-height: 80%;
+    max-width: 80%;
+    margin: 10% auto;
   }
 
 @media (max-width: 1535px) {
@@ -209,7 +234,7 @@ body {
     .catalogo-item h3 {
         font-size: 20px;
       }
-
+    
       .catalogo-item p {
         font-size: 12px;
       }
@@ -242,4 +267,5 @@ body {
     text-align: left;
     padding: 20px;
 }
+
 

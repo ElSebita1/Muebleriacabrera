@@ -71,41 +71,43 @@ body {
     text-align: center;
 }
 
+.servtotal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-bottom: 30px;
+}
+
 .botonesrrss-texto p1{
     font-family: 'Dancing Script', cursive;
     font-size: 40px;
     display: list-item;
     text-align: left;
-    padding: 20px;
+    padding: 20px 50px;
 }
 
 .botonesrrss-texto a1{
     
-    color: rgb(36, 36, 36);
+    color: rgb(95, 58, 15);
+    font-size: 30px;
 }
 
 
-.image-frame {
-    float: right;
-    width: 300px;
+.img-servicios {
     border: 3px solid rgb(126, 107, 73); 
     padding: 10px;
-    margin-right: 100px;
+    width: 60%;
   }
-
-@media (max-width: 2560px) {
-    .botonesrrss-texto p1{
-        font-size: 50px;
-    }
-    .image-frame{
-        width: 600px;
-        height: auto;
-        float:right;
-        margin-right: 80px;
-        
-    }
-}
-
+  .image-frame img{
+    max-width: 400px;
+    max-height: auto;
+  }
+  .servicios h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 55px;
+  }
 @media (max-width: 1535px) {
     header {
         padding: 15px 3%;
@@ -317,65 +319,27 @@ body {
       .bajada {
         padding: 20px 20px 20px;
       }
-      .image-frame{
-        width: 100%;
-        height: auto;
-        float:none;
-        padding: 10px;
-        margin-left: auto;
-        
-    }
     .botonesrrss-texto p1{
         font-size: 20px;
     }
-}
-
-@media (max-width: 768px) {
-    .image-frame{
-        width: 100%;
-        height: auto;
-        float:none;
-        padding: 10px;
-        margin-left: auto;
-        
-    }
-    .botonesrrss-texto p1{
-        font-size: 30px;
+    .img-servicios {
+        width: 80%;
     }
 }
-@media (max-width: 375px) {
-    .image-frame{
-        width: 100%;
-        height: auto;
-        float:none;
-        padding: 10px;
-        margin-left: auto;
-        
+@media(max-width: 550px) {
+    .servtotal {
+        grid-template-columns: repeat(1, 1fr);
     }
-    .botonesrrss-texto p1{
-        font-size: 20px;
+    .img-servicios {
+        width: 45%;
+        align-items: center;
+        margin-bottom: 30px;
+        justify-content: center;
+        display: block;
+        margin: auto;
     }
-}
-@media (max-width: 320px) {
-    .image-frame{
-        width: 100%;
-        height: auto;
-        float:none;
-        padding: 10px;
-        margin-left: auto;
-        
-    }
-    .botonesrrss-texto p1{
-        font-size: 20px;
+    .botonesrrss-texto p1 {
+        font-weight: 1000;
+        text-align: center;
     }
 }
-
-.servicios h1{
-    font-family: 'Dancing Script', cursive;
-    font-weight: bold;
-    text-align: center;
-    font-size: 55px;
-}
-
-
-

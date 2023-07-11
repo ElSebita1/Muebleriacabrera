@@ -335,6 +335,15 @@ body {
     .caja-btn a {
         height: 25px;
     }
+    .bajada h2 {
+        font-size: 40px;
+      }
+      .bajada p {
+        font-size: 20px;
+      }
+      .bajada {
+        padding: 20px 20px 20px;
+      }
 }
 @media (max-width: 550px) {
     .monitoinicio-img img {

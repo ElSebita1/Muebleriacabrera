@@ -17,6 +17,9 @@ sr.reveal('.muestrario', {delay:200, origin:'bottom'})
 sr.reveal('.variedad', {delay:200, origin:'top'})
 sr.reveal('.textoinicio', {delay:200, origin:'right'})
 sr.reveal('.caja-prin', {delay:300, origin:'bottom'})
+sr.reveal('.servicios', {delay:100, origin:'top'})
+sr.reveal('.botonesrrss-texto', {delay:20, origin:'top'})
+sr.reveal('.img-servicios', {delay:20, origin:'bottom'})
 
 function mostrarCategoria(categoria) {
     // Borra el contenido actual del catálogo

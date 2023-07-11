@@ -86,11 +86,16 @@ body {
 }
   
   .botonrrss a{
+    display: inline-block;
     text-align: left;
-    padding: 20px;
+    padding: 0px;
     color: #000000;
     font-family: 'Dancing Script', cursive;
-    margin-top: 60px;
+    margin-top: 0px;
+    transition: all .55s ease;
+  }
+  .botonrrss a:hover{
+    transform: translateX(20px)
   }
   
   .botonrrss p {
@@ -235,6 +240,15 @@ body {
     .maps h2{
         font-size: 22px;
     }
+    .bajada h2 {
+        font-size: 40px;
+      }
+      .bajada p {
+        font-size: 20px;
+      }
+      .bajada {
+        padding: 20px 20px 20px;
+      }
 }
 @media (max-width: 550px) {
     iframe{
@@ -265,7 +279,7 @@ body {
     }
     .botonrrss a{
         text-align: left;
-        padding: 20px;
+        padding: 5px;
         margin-left: 1px;
     }
     .rrss p{
