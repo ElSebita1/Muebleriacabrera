@@ -1,0 +1,345 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    position: static;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 33px 9%;
+    background: transparent;
+}
+.logo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 45px;
+    font-weight: 700;
+    color: #555047 ;
+}
+.navegador {
+    display: flex;
+}
+.navegador a{
+    color: black;
+    margin-left: 60px;
+    font-size: 15px;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: all .55s ease;
+}
+.navegador a:hover{
+    border-bottom: 2px solid black;
+}
+#menu-icon{
+    color: black;
+    font-size: 35px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+body {
+    background: linear-gradient(245.59deg, white 0%, #d8d3c6 28.53%, #f1f2ec 75.52%);
+}
+.contactos {
+    text-align: center;
+    font-size: 40px;
+}
+.contactos h4{
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+}
+.bajada {
+    padding: 30px 100px;
+}
+.bajada h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 60px;
+    text-align: center;
+}
+.bajada p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-style: italic;
+    text-align: center;
+}
+
+.servtotal {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.botonesrrss-texto p1{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+    display: list-item;
+    text-align: left;
+    padding: 20px 50px;
+}
+
+.botonesrrss-texto a1{
+    
+    color: rgb(95, 58, 15);
+    font-size: 30px;
+}
+
+
+.img-servicios {
+    border: 3px solid rgb(126, 107, 73); 
+    padding: 10px;
+    width: 60%;
+  }
+  .image-frame img{
+    max-width: 400px;
+    max-height: auto;
+  }
+  .servicios h1 {
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    text-align: center;
+    font-size: 55px;
+  }
+@media (max-width: 1535px) {
+    header {
+        padding: 15px 3%;
+        transition: .2s;
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
+}
+@media (max-width: 1460px) {
+    section {
+        padding: 0 12%;
+        transition: .2s;
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
+}
+@media (max-width: 1340px) {
+    #menu-icon {
+        display: block;
+    }
+    .navegador {
+        position: absolute;
+        top: -50%;
+        right: 0;
+        width: 300px;
+        background: #000000;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+        z-index: 11;
+    }
+    .navegador a {
+        margin-left: 0;
+        display: block;
+        margin: 10px 0;
+        color: white;
+    }
+    .navegador.open {
+        right: 0;
+        top: 60px;
+    }
+    .categorias button {
+        padding: 2px;
+    }
+    .categorias {
+        grid-gap: 10px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
+}
+
+@media (max-width: 1195px) {
+    #menu-icon {
+        display: block;
+    }
+    .navegador {
+        position: absolute;
+        top: -50%;
+        right: 0;
+        width: 300px;
+        background: #000000;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+        z-index: 11;
+    }
+    .navegador a {
+        margin-left: 0;
+        display: block;
+        margin: 10px 0;
+        color: white;
+    }
+    .navegador.open {
+        right: 0;
+        top: 60px;
+    }
+    .categorias button {
+        padding: 2px;
+    }
+    .categorias {
+        grid-gap: 10px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+}
+@media (max-width: 1024px) {
+    .image-frame{
+        width: 100%;
+        height: auto;
+        float:none;
+        padding: 10px;
+        margin-left: auto;
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+}
+@media (max-width: 990px) {
+    #menu-icon {
+        display: block;
+    }
+    .navegador {
+        position: absolute;
+        top: -50%;
+        right: 0;
+        width: 300px;
+        background: #000000;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 20px;
+        transition: all .55s ease;
+        z-index: 11;
+    }
+    .navegador a {
+        margin-left: 0;
+        display: block;
+        margin: 10px 0;
+        color: white;
+    }
+    .navegador.open {
+        right: 0;
+        top: 60px;
+    }
+    .categorias button {
+        padding: 2px;
+    }
+    .categorias {
+        grid-gap: 10px;
+    }
+    .image-frame{
+        float:right;
+        margin-right: 50px;
+        
+    }
+    .botonesrrss-texto p1{
+        font-size: 30px;
+    }
+}
+@media (max-width: 680px) {
+    .categorias{
+        padding: 15px 3px;
+    }
+    .categorias button {
+        font-size: 15px;
+        padding: 4px 7px;
+    }
+    .catalogo-container {
+        display: grid;
+        grid-template-columns: repeat(2, 48.5%); 
+        grid-gap: 10px;
+        margin-top: 10px;
+        margin-bottom: 30px;
+      }
+    .catalogo-item h3 {
+        font-size: 20px;
+      }
+    
+      .catalogo-item p {
+        font-size: 12px;
+      }
+      .bajada h2 {
+        font-size: 40px;
+      }
+      .bajada p {
+        font-size: 20px;
+      }
+      .bajada {
+        padding: 20px 20px 20px;
+      }
+    .botonesrrss-texto p1{
+        font-size: 20px;
+    }
+    .img-servicios {
+        width: 80%;
+    }
+}
+@media(max-width: 550px) {
+    .servtotal {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .img-servicios {
+        width: 45%;
+        align-items: center;
+        margin-bottom: 30px;
+        justify-content: center;
+        display: block;
+        margin: auto;
+    }
+    .botonesrrss-texto p1 {
+        font-weight: 1000;
+        text-align: center;
+    }
+}
